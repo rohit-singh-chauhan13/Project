@@ -1,0 +1,183 @@
+.form-data-table {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column; /* Stack logo and heading vertically */
+  align-items: center; /* Center align items horizontally */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.logo {
+  width: 120px; /* Increased size of the logo */
+  height: 120px; /* Increased size of the logo */
+  background-color: #0000FF;
+  mask-image: url('../Logo/logo.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  WebkitMaskImage: url('../Logo/logo.png');
+  WebkitMaskSize: contain;
+  WebkitMaskRepeat: no-repeat;
+  WebkitMaskPosition: center;
+  margin-bottom: 10px; /* Add space between logo and heading */
+  position: relative;
+  z-index: 1; 
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin: 0;
+  z-index: 1; /* Ensure heading is above the logo */
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add gap between search and refresh button */
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  position: relative;
+  flex-grow: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.refresh-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #45a049;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+th:hover {
+  background-color: #e6e6e6;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  color: #3498db;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.delete-button:hover {
+  color: #2980b9;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .logo {
+      width: 100px; /* Adjust logo size for smaller screens */
+      height: 100px; /* Adjust logo size for smaller screens */
+      margin-bottom: 10px; /* Margin below logo on smaller screens */
+  }
+
+  .table-actions {
+      flex-direction: column;
+      gap: 10px; /* Reduced gap on smaller screens */
+  }
+
+  .search-bar input {
+      width: auto; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-data-table {
+      padding: 10px;
+  }
+
+  .refresh-button {
+      width: 100%; /* Full width on smaller screens */
+  }
+}

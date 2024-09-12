@@ -1,0 +1,153 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading-container {
+    margin-bottom: 2rem;
+  }
+  
+  .heading-container h2 {
+    color: #007bff;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    display: flex;
+  }
+  
+  .search-bar input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+  
+  .search-bar button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 0 0.25rem 0.25rem 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search-bar button:hover {
+    background-color: #0056b3;
+  }
+  
+  .search-bar button:disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+  
+  .user-data {
+    margin-top: 2rem;
+  }
+  
+  .user-data h3 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f8f9fa;
+  }
+  
+  .table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  
+  .download-icon {
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .download-icon:hover {
+    color: #0056b3;
+  }
+  
+  .table-footer {
+    margin-top: 2rem;
+    text-align: right;
+    color: #6c757d;
+  }
+  
+  @media (max-width: 768px) {
+    .search-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .logo {
+      margin-bottom: 1rem;
+      align-self: center;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+    }
+  
+    .search-bar input,
+    .search-bar button {
+      width: 100%;
+      border-radius: 0.25rem;
+    }
+  
+    .search-bar input {
+      margin-bottom: 0.5rem;
+    }
+  }

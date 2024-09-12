@@ -1,0 +1,9 @@
+.not-found-container {
+    background: url('/path/to/your/background-image.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .text-center {
+    max-width: 600px;
+  }
+  
